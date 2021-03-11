@@ -1,7 +1,9 @@
-import logo from '../src/scan.png';
-import './App.css';
-import { useState } from 'react/cjs/react.development';
+import scan from '../src/scan.png';
+import vaccine from '../src/vaccine.png';
+import news from '../src/news.png';
+import login from '../src/admin.png';
 
+import './App.css';
 
 
 function App() {
@@ -9,10 +11,10 @@ function App() {
     <html>
       <div className="App">
         <div class="topnav">
-              <a class="logo" href="app.js"><img src={logo}/> Home</a>
-              <a href="#index.html" target="_blank">Admin Login</a>
-              <a href="#index.html" target="_blank">Vaccine Finder</a>
-              <a href="#index.html" target="_blank">News</a> 
+              <a href="app.js"><img alt="scan" src={scan}/> Home</a>
+              <a href="#index.html" target="_blank"><img alt="adminLogin" src={login}/> Admin Login</a>
+              <a href="#index.html" target="_blank"><img alt="vaccine"src={vaccine}/> Vaccine Finder</a>
+              <a href="#index.html" target="_blank"><img alt="news" src={news}/> News</a> 
             </div>
         <header className="App-header">
           <head>

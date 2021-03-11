@@ -29,6 +29,8 @@ html, body {
 img {
   width: 45px;
   height: 45px;
+  margin-bottom: 1px;
+  padding-top: 5px;
 }
 
 h1 {
@@ -106,10 +108,6 @@ color:white;
 
 }
 
-.logo {
-  padding: 0;
-}
-
 .topnav {
   overflow: hidden;
   background-color:#06406e;
@@ -125,7 +123,7 @@ color:white;
   color:#f2f2f2;
   text-align: center;
   text-decoration: none;
-  font-size: 45px;
+  font-size: 60px;
   text-shadow: 3px 3px black;
 }
 
@@ -142,13 +140,14 @@ color:white;
 
 .myButton {
   margin-top: 40px;
-  background-color: #06406e;
-  border-radius:42px;
-  border:6px solid black;
+  margin-bottom: 100px;
+  background-color: hsl(207, 90%, 23%);
+  border-radius:100px;
+  border: 3px solid black;
   display: inline-table;
   cursor:pointer;
   color:#ffffff;
-  font-size:30px;
+  font-size:50px;
   font-weight:bold;
   padding:21px 48px;
   text-decoration:none;
@@ -164,12 +163,12 @@ color:white;
 .myButton2 {
   margin-top: 80px;
   background-color: #06406e;
-  border-radius:42px;
-  border:6px solid black;
+  border-radius:100px;
+  border: 3px solid black;
   display: inline-table;
   cursor:pointer;
   color:#ffffff;
-  font-size:30px;
+  font-size:50px;
   font-weight:bold;
   padding:21px 48px;
   text-decoration:none;
