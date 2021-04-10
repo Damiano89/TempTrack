@@ -16,9 +16,9 @@ function App() {
                   <a href="logout.html" target="_blank"><img alt="logout" src={logout}/> Logout</a>
                 </div>
               <div className="buttons">
-                <a href="index.html" class="myButton" target="_blank">EMPLOYEE</a>
+                <a href="employee.html" class="myButton">EMPLOYEE</a>
                 <br/>
-                <a href="index.html" class="myButton2" target="_blank">GUEST</a>
+                <a href="index.html" class="myButton2">GUEST</a>
               </div>
               
 <footer className="style1">&copy; All reserved by Temps Company</footer>
