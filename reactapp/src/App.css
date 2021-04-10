@@ -8,19 +8,20 @@
 }
 
 .App-header {
-  background-image: url(./backgrond.jpg);
+  background-image: url(./background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-html, body {
+
+
+html {
   margin: 0;
   height: 100%;
   overflow: hidden;
@@ -71,24 +72,6 @@ margin-right:auto;
 background-color:#4e86ee;
 }
 
-.style {
-text-align: center;
-height:auto;
-width:100%;
-margin:0;
-padding:0;
-position:absolute;
-
-left:50%;
-transform:translate(-50%,-120%);
-font-family:Arial;
-line-height:2em;
-
-font-size:20px;
-background-color:#ECEE4E;
-color:black;
-
-}
 .style1 {
 text-align: center;
 height:auto;
@@ -96,12 +79,8 @@ width:100%;
 bottom: 0;
 margin: 0;
 position:fixed;
-
-left:50%;
-transform:translate(-50%,-120%);
 font-family:Arial;
 line-height:2em;
-
 font-size:15px;
 background-color:black;
 color:white;
@@ -110,27 +89,25 @@ color:white;
 
 .topnav {
   overflow: hidden;
-  background-color:#06406e;
-  border-bottom: solid 2px black;
+  background-color:black;
+  border-bottom: 2px solid #505eaf;
   padding-bottom: 5px;
 }
 
 .topnav a {
   padding: 14px 16px;
   float: center;
-  border-right: solid 2px black;
-  border-left: solid 2px black;
+  border: 1px solid black;
   color:#f2f2f2;
   text-align: center;
   text-decoration: none;
   font-size: 60px;
-  text-shadow: 3px 3px black;
 }
 
 .topnav a:hover {
-  background-color: #1bb9ff;
+  background-color: #2f3032;
   color: white;
-  text-shadow: 3px 3px black;
+  border: 1px solid #505eaf;
 }
 
 .buttons {
@@ -139,11 +116,11 @@ color:white;
 }
 
 .myButton {
-  margin-top: 40px;
+  margin-top: 150px;
   margin-bottom: 100px;
-  background-color: hsl(207, 90%, 23%);
+  background-color: black;
   border-radius:100px;
-  border: 3px solid black;
+  border: 1px solid #505eaf;
   display: inline-table;
   cursor:pointer;
   color:#ffffff;
@@ -151,20 +128,19 @@ color:white;
   font-weight:bold;
   padding:21px 48px;
   text-decoration:none;
-  text-shadow: 2px 2px black;
 }
 
 .myButton:hover {
-  background-color: #1bb9ff;
+  background-color: #2f3032;
   color: white;
-  text-shadow: 2px 2px black;
+  border: 1px solid #505eaf;
 }
 
 .myButton2 {
   margin-top: 80px;
-  background-color: #06406e;
+  background-color: black;
   border-radius:100px;
-  border: 3px solid black;
+  border: 1px solid #505eaf;
   display: inline-table;
   cursor:pointer;
   color:#ffffff;
@@ -172,11 +148,12 @@ color:white;
   font-weight:bold;
   padding:21px 48px;
   text-decoration:none;
-  text-shadow: 2px 2px black;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .myButton2:hover {
-  background-color: #1bb9ff;
+  background-color: #2f3032;
   color: white;
-  text-shadow: 2px 2px black;
+  border: 1px solid #505eaf;
 }
