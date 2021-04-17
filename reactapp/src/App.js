@@ -16,7 +16,7 @@ function App() {
                   <a href="logout.html" target="_blank"><img alt="logout" src={logout}/> Logout</a>
                 </div>
               <div className="buttons">
-                <a href="employee.html" class="myButton">EMPLOYEE</a>
+                    <a href="Employee.html" class="myButton">EMPLOYEE</a>
                 <br/>
                 <a href="index.html" class="myButton2">GUEST</a>
               </div>
