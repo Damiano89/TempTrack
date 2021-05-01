@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './App';
-import reportWebVitals from './reportWebVitals';
 import { ProfilePage } from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './NavBar.css';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProfilePage />
+     <ProfilePage />
   </React.StrictMode>,
+ 
   document.getElementById('root')
 );
 

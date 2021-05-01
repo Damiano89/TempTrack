@@ -1,30 +1,43 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { NavBar } from './NavBar';
-import { EmployeeButton } from './EmployeeButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { GuestButton } from './GuestButton';
-import { Footer } from './Footer';
 import './Responsive.css';
+import { NavBar } from './NavBar';
+import { Footer } from './Footer';
+import './NavBar.css';
+import ReactDOM from 'react-dom';
+import EmployeePage from './Pages/Employee/EmployeePage';
 
+import{
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+import { EmployeeButton } from './EmployeeButton';
+import { GuestButton } from './GuestButton';
+
+//Import Pages
+//import MainPage from "/Pages";
+//import EmployeePage from "./Pages/Employee/employee";
+ 
 export class ProfilePage extends React.Component {
   render() {
     return (
       <div>
+      <Router>
       <NavBar />
-        <div className="mainContent w3-half">
-          <EmployeeButton />
-          <br />
-          <br />
-          <GuestButton />
-        </div>
-        <Footer />
-      </div>
+       <Switch>
+         <Route exact path="/"><EmployeeButton />
+       <GuestButton /></Route>
+       <Route path="/employee"><EmployeePage /></Route>
+       </Switch>
+       <Footer />
+      </Router>
       
+      </div>
     );
+   
   }
 }
 
-ReactDOM.render(<ProfilePage />, document.getElementById('root'));
-
-
+//ReactDOM.render(<ProfilePage />, document.getElementById('root'));
