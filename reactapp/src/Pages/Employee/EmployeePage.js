@@ -36,7 +36,7 @@ const EmployeePage = () => {
             </label>
             <textarea className="notes formEntry" placeholder="Notes" defaultValue={""} />
             <input type="checkbox" className="termsConditions" defaultValue="Term" />
-            <label style={{color: 'grey'}} htmlFor="terms"> I Accept the <span style={{color: '#0e3721'}}>Terms of Use</span> &amp; <span style={{color: '#0e3721'}}>Privacy Policy</span>.</label><br />
+            <label style={{color: 'grey'}} htmlFor="terms">  I Accept the <span style={{color: '#0e3721'}}>Terms of Use</span> &amp; <span style={{color: '#0e3721'}}>Privacy Policy</span>.</label><br />
             <button className="submit formEntry" onclick="Thanks()">Submit</button>
           </form>
         </div>
