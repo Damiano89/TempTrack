@@ -2,27 +2,9 @@ import React from 'react';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import './Form.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import{ Link } from "react-router-dom";
 
 class EmployeePage extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {value: 'coconut'};
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-  
-    handleSubmit(event) {
-      alert('Your favorite flavor is: ' + this.state.value);
-      event.preventDefault();
-    }
-  
-    render() {
+  render() {
       return (
         <Form id="formContent">
       <FormGroup>
@@ -44,7 +26,7 @@ class EmployeePage extends React.Component {
         <Label for="exampleText">Notes:</Label>
         <Input type="textarea" name="text" id="exampleText" />
       </FormGroup>
-      <Button><Link id="buttons" to="">Submit</Link></Button>
+      <Button><Input type="submit">Submit</Input></Button>
     </Form>
     );
   }
