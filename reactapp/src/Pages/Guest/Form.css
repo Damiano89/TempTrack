@@ -1,0 +1,23 @@
+#formContent {
+    background-color: whitesmoke;
+    border: 2px solid #505eaf;
+    width: 60%;
+    color: #505eaf;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    margin-right: 100px;
+    margin-bottom: 200px;
+    margin-left: -120px;
+    padding: 20px 20px;
+}
+
+#name, #temperature {
+    text-align: center;
+}
+
+#vaccine {
+    width: 100px;
+    margin-left: 230px;
+}
+
