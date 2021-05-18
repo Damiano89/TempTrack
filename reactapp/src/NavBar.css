@@ -65,6 +65,7 @@ img {
 }
 
 .card {
+  width: 20rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 20px;
   color: white;
@@ -101,5 +102,23 @@ img {
   color: black;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-decoration: none;
+}
+
+.tempList {
+  background-color: whitesmoke;
+    border: 1px solid #505eaf;
+    width: 60%;
+    color: #505eaf;
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    margin-right: 100px;
+    margin-left: -120px;
+    padding: 5px;
+}
+
+#title {
+  color: black;
+  text-align: center;
 }
 

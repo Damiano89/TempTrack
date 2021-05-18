@@ -1,10 +1,31 @@
 {
   "dependencies": {
     "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.6.0",
+    "concurrently": "^6.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.12.7",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.8",
+    "morgan": "^1.10.0",
     "react-bootstrap": "^1.5.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "temptracknew",
+  "description": "Temp Track is a Web Application to fight COVID-19 exposure.",
+  "version": "1.0.0",
+  "main": "SERVER.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Damiano89/TempTrack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Damiano89/TempTrack/issues"
+  },
+  "homepage": "https://github.com/Damiano89/TempTrack#readme"
 }

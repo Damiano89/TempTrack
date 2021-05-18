@@ -1,26 +1,35 @@
-const express = require("express")
-const app = express()
-const cors = require("cors")
-const mongoose = require ("mongoose")
+const express = require('express');
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+const path = require('path');
+const employeeRoutes = require('./reactapp/src/ROUTES/api');
+const guestRoutes = require('./reactapp/src/ROUTES/guestApi');
 
-app.use(cors())
-app.use(express.json())
 
-//connect to mongoose
-mongoose.connect("mongodb://127.0.0.1:27017/Employee", {
-  useNewUrlParser: true
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+const MONGODB_URI = 'mongodb+srv://damiano:damiano@temperatures.v8wxh.mongodb.net/Temperatures?retryWrites=true&w=majority';
+
+mongoose.connect(MONGODB_URI || 'mongodb://localhost/Temperatures', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
-const connection = mongoose.connection;
-
-connection.once("open", function() {
-  console.log("Connection with MongoDB was successful");
+mongoose.connection.on(`connected`, () => {
+  console.log(`Mongoose is connected!`);
 });
 
-//require route
-app.use("/",require("./routes/route"))
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
+//HTTP Request
+app.use(morgan('tiny'));
+app.use('/api', employeeRoutes);
+app.use('/guestApi', guestRoutes);
 
-app.listen(3001,function(){
-console.log("express server is running on port 3001")
-})
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to TempTrack." });
+});
+
+app.listen(PORT, console.log(`Server is starting at ${PORT}`));

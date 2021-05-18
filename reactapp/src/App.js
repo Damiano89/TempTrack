@@ -7,14 +7,15 @@ import { EmployeeButton } from './EmployeeButton';
 import { GuestButton } from './GuestButton';
 import EmployeePage from './Pages/Employee/EmployeePage';
 import GuestPage from './Pages/Guest/GuestPage';
+import Temperatures from './temperatures';
 
 import{
   BrowserRouter as Router,
   Route,
   Switch
-} from "react-router-dom";
+} from 'react-router-dom';
 
-export class ProfilePage extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -28,14 +29,17 @@ export class ProfilePage extends React.Component {
             <br /><br />
             <GuestButton />
          </Route>
+       <Route path="/temperatures"><Temperatures /></Route>
        <Route path="/employee"><EmployeePage /></Route>
        <Route path="/guest"><GuestPage /></Route>
+       <Route path="/news"></Route>
        </Switch>
        </div>
        <Footer />
       </Router>
       </div>
-    );
-   
+    ); 
   }
 }
+
+export default App;
