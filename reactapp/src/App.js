@@ -8,6 +8,7 @@ import { GuestButton } from './GuestButton';
 import EmployeePage from './Pages/Employee/EmployeePage';
 import GuestPage from './Pages/Guest/GuestPage';
 import Temperatures from './temperatures';
+import News from './News';
 
 import{
   BrowserRouter as Router,
@@ -32,7 +33,7 @@ class App extends React.Component {
        <Route path="/temperatures"><Temperatures /></Route>
        <Route path="/employee"><EmployeePage /></Route>
        <Route path="/guest"><GuestPage /></Route>
-       <Route path="/news"></Route>
+       <Route path="/news"><News /></Route>
        </Switch>
        </div>
        <Footer />

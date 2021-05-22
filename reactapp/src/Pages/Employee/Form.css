@@ -16,3 +16,10 @@
     text-align: center;
 }
 
+.fever {
+    color: darkred;
+}
+
+.noFever {
+    color: green;
+}

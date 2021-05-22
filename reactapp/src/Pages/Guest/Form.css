@@ -17,3 +17,11 @@
 }
 
 
+.fever {
+    color: darkred;
+}
+
+.noFever {
+    color: green;
+}
+

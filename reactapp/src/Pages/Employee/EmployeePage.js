@@ -4,9 +4,13 @@ import './Form.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 
+var today = new Date(),
+date = today.getMonth() + '-' + today.getDate() + '-' + today.getFullYear();
+
 class EmployeePage extends React.Component {
   state = {
     name: '',
+    date: '',
     temperature: '',
     vaccine: '',
     notes: '',
@@ -44,6 +48,7 @@ class EmployeePage extends React.Component {
 
     const payload = {
       name: this.state.name,
+      date: date,
       temperature: this.state.temperature,
       vaccine: this.state.vaccine,
       notes: this.state.notes
@@ -67,6 +72,7 @@ class EmployeePage extends React.Component {
   resetUserInputs = () => {
     this.setState({
       name: '',
+      date: '',
       temperature: '',
       vaccine: '',
       notes: ''
@@ -81,6 +87,7 @@ class EmployeePage extends React.Component {
       <div key={index}>
         <h3>{temp.name}</h3>
         <p>
+          {temp.date}<br />
           {temp.temperature}<br />
           {temp.vaccine}<br />
           {temp.notes}<br />
@@ -97,24 +104,21 @@ class EmployeePage extends React.Component {
     <Form onSubmit={this.submit} id="formContent">
       <FormGroup>
         <Label for="name">Employee Full Name</Label>
-          <Input type="text" name="name" id="name" placeholder="Full Name"  value={this.state.name} onChange={this.handleChange}/>
+          <Input required type="text" name="name" id="name" placeholder="Full Name"  value={this.state.name} onChange={this.handleChange}/>
       </FormGroup>
       <FormGroup>
       <Label for="temperature">Temperature</Label>
-      <Input type="number" step="0.1" name="temperature" id="temperature" placeholder="Temperature" value={this.state.temperature} onChange={this.handleChange}/>
+      <Input required type="number" step="0.1" name="temperature" id="temperature" placeholder="Temperature" value={this.state.temperature} onChange={this.handleChange}/>
       </FormGroup>
         <FormGroup>
           <Label for="vaccinated" >Vaccinated? (Yes/No)</Label>
-            <Input type="text" name="vaccine" id="vaccine" value={this.state.vaccine} onChange={this.handleChange}/>
+            <Input required type="text" name="vaccine" id="vaccine" value={this.state.vaccine} onChange={this.handleChange}/>
         </FormGroup>
         <FormGroup>
           <Label for="notes">Notes:</Label>
             <Input type="text" name="notes" id="notes" value={this.state.notes} onChange={this.handleChange}/>
         </FormGroup>
         <Button>Submit</Button>
-        {/* <div className="formContent">
-            {this.displayEmployeeTemp(this.state.temps)}
-          </div> */}
     </Form>
     );
   }

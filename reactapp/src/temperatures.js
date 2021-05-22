@@ -19,14 +19,15 @@ class Temperatures extends React.Component {
       <div>
       <Router>
         <Switch>
-            <Route path="/temperatures">
-                <EmployeeTempButton />
-                <br /> <br />
-                <br /> <br />
-                <GuestTempButton />
+            <Route exact path="/temperatures">
+                    <EmployeeTempButton />
+                    <br /> <br />
+                    <br /> <br />
+                    <GuestTempButton />
             </Route>
        <Route path="/employeeList"><EmployeeList /></Route>
        <Route path="/guestList"><GuestList /></Route>
+       <Route path="/news"></Route>
        </Switch>
        <Footer />
       </Router>
